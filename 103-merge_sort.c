@@ -6,30 +6,30 @@
  * @size: Number of elements in @array
  * @i: left index
  * @j: right index
- * @current: current position subarrays
+ * @c: current position subarrays
  * @aux: temp array to store sorted elements
  */
-void rem(int *array, int *aux, size_t i, size_t j, size_t current, size_t size)
+void rem(int *array, int *aux, size_t i, size_t j, size_t c, size_t size)
 {
 	size_t middle = size / 2;
 
 	while (i < middle)
 	{
-		aux[current] = array[i];
-		current++;
+		aux[c] = array[i];
+		c++;
 		i++;
 	}
 	while (j < size - middle)
 	{
-		aux[current] = (array + middle)[j];
-		current++;
+		aux[c] = (array + middle)[j];
+		c++;
 		j++;
 	}
-	current = 0;
-	while (current < size)
+	c = 0;
+	while (c < size)
 	{
-		array[current] = aux[current];
-		current++;
+		array[c] = aux[c];
+		c++;
 	}
 	printf("[Done]: ");
 	print_array(array, size);

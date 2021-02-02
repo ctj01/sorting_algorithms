@@ -11,9 +11,9 @@
  */
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 void insertion_sort_list(listint_t **list);
@@ -23,6 +23,6 @@ listint_t *create_listint(const int *array, size_t size);
 void print_list(const listint_t *list);
 void Merge(int *array, int *aux, size_t size);
 void merge_sort(int *array, size_t size);
-void rem(int *array, int *aux, size_t i, size_t j, size_t current, size_t size);
+void rem(int *array, int *aux, size_t i, size_t j, size_t c, size_t size);
 
 #endif
