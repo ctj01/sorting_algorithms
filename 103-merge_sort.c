@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * remaining - remaining_elements of both sides
+ * rem - remaining_elements of both sides
  *
  * @array: The array
  * @size: Number of elements in @array
@@ -9,7 +9,7 @@
  * @current: current position subarrays
  * @aux: temp array to store sorted elements
  */
-void remaining(int *array, int *aux, int i, int j, int current, size_t size)
+void rem(int *array, int *aux, size_t i, size_t j, size_t current, size_t size)
 {
 	size_t middle = size / 2;
 
@@ -65,7 +65,7 @@ void merge_sort(int *array, size_t size)
 void Merge(int *array, int *aux, size_t size)
 {
 	size_t middle = size / 2;
-	int i = 0, j = 0, sentinel = 0;
+	size_t i = 0, j = 0, sentinel = 0;
 
 	if (size < 2)
 		return;
@@ -90,5 +90,5 @@ void Merge(int *array, int *aux, size_t size)
 		}
 		sentinel++;
 	}
-	remaining(array, aux, i, j, sentinel, size);
+	rem(array, aux, i, j, sentinel, size);
 }
