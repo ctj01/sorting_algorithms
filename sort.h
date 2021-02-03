@@ -24,5 +24,7 @@ void print_list(const listint_t *list);
 void Merge(int *array, int *aux, size_t size);
 void merge_sort(int *array, size_t size);
 void rem(int *array, int *aux, size_t i, size_t j, size_t c, size_t size);
+void selection_sort(int *array, size_t size);
+void swap(int *aux, int *array);
 
 #endif
